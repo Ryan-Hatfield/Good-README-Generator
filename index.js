@@ -83,7 +83,7 @@ function init() {
         axios.get(queryUrl).then(function(res) {
             const gitData = res.data;
             const gitName = gitData.login;
-            const gitEmail = gitData.email;
+            //const gitEmail = gitData.email;
             const gitUrl = gitData.html_url;
             const gitPortfolio = gitData.blog;
             //const contributorUsername = questions.username;
