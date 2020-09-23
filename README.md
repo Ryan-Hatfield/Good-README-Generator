@@ -29,10 +29,10 @@ User inputs the guidelines for contribituting to the project.
 ## Tests
 User inputs test examples for testing the the project.
 ## Questions
-Ryan-Hatfield
-```
+
+Username **Ryan-Hatfield**
+
 If you have any questions you can email me at: hatfield086@gmail.com .
-```
 ## Contributors
 Ryan-Hatfield
 ## Author
@@ -42,8 +42,8 @@ Username **Ryan-Hatfield**
 GitHub: https://github.com/Ryan-Hatfield
 
 Portfolio: https://ryan-hatfield.github.io/Portfolio/
-```
 ## License
-This application is licensed under the User inputs the name of the license being used.
-```
-You can view this license under the User inputs the license URL being used. file.
+
+This application is licensed under the MIT
+
+You can view this license under the MIT.md file.

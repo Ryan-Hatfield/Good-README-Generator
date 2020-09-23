@@ -121,21 +121,17 @@ ${response.contributing}
 ## Tests
 ${response.tests}
 ## Questions
-${gitName}
-\`\`\`
-If you have any questions you can email me at: ${response.questions} .
-\`\`\`
+\nUsername **${gitName}**
+\nIf you have any questions you can email me at: ${response.questions} .
 ## Contributors
 ${response.contributors}
 ## Author
 \nUsername **${gitName}**
 \nGitHub: ${gitUrl}
 \nPortfolio: ${gitPortfolio}
-\`\`\`
 ## License
-This application is licensed under the ${response.licenseName}
-\`\`\`
-You can view this license under the ${response.licenseUrl} file.`
+\nThis application is licensed under the ${response.licenseName}
+\nYou can view this license under the ${response.licenseUrl} file.`
 
 writeToFile("ReadMe.md", markDown)
           });
