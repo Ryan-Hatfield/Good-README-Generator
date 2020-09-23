@@ -2,6 +2,7 @@ const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
 const path = require('path');
+const { title } = require("process");
 //const util = require("util");
 
 //const writeFileAsync = util.promisify(fs.writeFile);
@@ -65,8 +66,15 @@ function init() {
     inquirer.prompt(questions)
     .then(function(response){
         let markDown = `# ${response.title} 
-## Description        
-${response.description}`
+        ## Description
+        ${response.description}
+        \n* [Installation](#Installation)
+        \n* [Instructions](#Instructions)
+        \n* [Usage](#Usage)
+        \n* [Contributors](#Contributors)
+        \n* [Tests](#Tests)
+        \n* [Questions](#Questions)
+        \n* [License](#License)`
         writeToFile("ReadMe.md", markDown)
     })
 
