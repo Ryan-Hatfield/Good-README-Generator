@@ -1,3 +1,4 @@
+![GitHub](https://img.shields.io/github/license/ryan-Hatfield/Good-README-Generator)
 # Title 
 ## Description
 User inputs the description of the project.
