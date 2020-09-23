@@ -1,10 +1,12 @@
 const fs = require("fs");
 const axios = require("axios");
 const inquirer = require("inquirer");
-const fs = require("fs");
-const util = require("util");
+const path = require('path');
+//const util = require("util");
 
-// array of questions for user
+//const writeFileAsync = util.promisify(fs.writeFile);
+
+//---Array of questions for user
 const questions = [
     {
         type: "input",
@@ -53,14 +55,22 @@ const questions = [
     },
 ];
 
-// function to write README file
+//---Function to write README file
 function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data)
 }
 
-// function to initialize program
+//---Function to initialize program
 function init() {
+    inquirer.prompt(questions)
+    .then(function(response){
+        let markDown = `# ${response.title} 
+## Description        
+${response.description}`
+        writeToFile("ReadMe.md", markDown)
+    })
 
 }
 
-// function call to initialize program
+//---Function call to initialize program
 init();
