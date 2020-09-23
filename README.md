@@ -1,23 +1,24 @@
-# User Inputs Title
-![GitHub](https://img.shields.io/github/license/ryan-Hatfield/Good-README-Generator)
+# This Is The Title
+![GitHub](https://img.shields.io/github/license/ryan-Hatfield/Good-README-Generator) 
 ## Description
 User inputs the description of the project.
+## Table of Contents
 
 * [Installation](#Installation)
 
 * [Usage](#Usage)
 
-* [Contributing](#Contributing)
+* [License](#License)
 
-* [Contributors](#Contributors)
+* [Contributing](#Contributing)
 
 * [Tests](#Tests)
 
 * [Questions](#Questions)
 
-* [Author](#Author)
+* [Contributors](#Contributors)
 
-* [License](#License)
+* [Author](#Author)
 
 ## Installation
 User Inputs the steps to install the project.
@@ -25,23 +26,24 @@ User Inputs the steps to install the project.
 User inputs examples of usage and instructions.
 ## Contributing
 User inputs the guidelines for contribituting to the project.
-## Contributors
-Ryan-Hatfield
 ## Tests
 User inputs test examples for testing the the project.
 ## Questions
 Ryan-Hatfield
 ```
-If you have any questions you can email me at: hatfield086@gmail.com
+If you have any questions you can email me at: hatfield086@gmail.com .
+```
+## Contributors
+Ryan-Hatfield
 ## Author
 
-**Ryan-Hatfield**
+Username **Ryan-Hatfield**
 
 GitHub: https://github.com/Ryan-Hatfield
 
 Portfolio: https://ryan-hatfield.github.io/Portfolio/
 ```
 ## License
-User inputs the name of the license being used.
+This application is licensed under the User inputs the name of the license being used.
 ```
-User inputs the license URL being used.
+You can view this license under the User inputs the license URL being used. file.

@@ -41,18 +41,8 @@ const questions = [
     },
     {
         type: "input",
-        message: "What is your GitHub username?",
-        name: "username"
-    },
-    {
-        type: "input",
         message: "Provide the guidelines for contributing to this application.",
         name: "contributing"
-    },
-    {
-        type: "input",
-        message: "If any, provide the GitHub username(s) for any additonal contributors(If there are mulitple contributors, seperate names with a comma and no space!).",
-        name: "contributors"
     },
     {
         type: "input",
@@ -61,8 +51,18 @@ const questions = [
     },
     {
         type: "input",
+        message: "What is your GitHub username?",
+        name: "username"
+    },
+    {
+        type: "input",
         message: "What is your email address?",
         name: "questions"
+    },
+    {
+        type: "input",
+        message: "If any, provide the GitHub username(s) for any additonal contributors(If there are mulitple contributors, seperate names with a comma and no space!).",
+        name: "contributors"
     },
 ];
 
@@ -78,28 +78,39 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(function(response){
+//--Getting the username information from the GitHub API
+        /*var contributorUsernames = questions.contributors;
+        var contributorUsernamesArray = contributorUsernames.split(",");
+        for (i=0; i<contributorUsernamesArray.length; i++){
+            var contributorGitUsername = contributorUsernamesArray[i]
+            var contributorRes = axios.get(`https://api.github.com/users/${contributorGitUsername}`);
+            var contributorUrl = contributorRes.data.html_url;
+            var resultContributor = (`${contributorsGitUsername}  GitHubLink: ${contributorUrl}`);
+            };*/
         const gitUsername = response.username;
         const queryUrl = `https://api.github.com/users/${gitUsername}`;
         axios.get(queryUrl).then(function(res) {
             const gitData = res.data;
             const gitName = gitData.login;
-            //const gitEmail = gitData.email;
             const gitUrl = gitData.html_url;
             const gitPortfolio = gitData.blog;
-            //const contributorUsername = questions.username;
         
+        
+            
+//--Layout of the README file   
 const markDown = `# ${response.title}
 ![GitHub](https://img.shields.io/github/license/ryan-Hatfield/Good-README-Generator) 
 ## Description
 ${response.description}
+## Table of Contents
 \n* [Installation](#Installation)
 \n* [Usage](#Usage)
+\n* [License](#License)
 \n* [Contributing](#Contributing)
-\n* [Contributors](#Contributors)
 \n* [Tests](#Tests)
 \n* [Questions](#Questions)
+\n* [Contributors](#Contributors)
 \n* [Author](#Author)
-\n* [License](#License)
 
 ## Installation
 ${response.installation}
@@ -107,29 +118,30 @@ ${response.installation}
 ${response.usage}
 ## Contributing
 ${response.contributing}
-## Contributors
-${gitName}
 ## Tests
 ${response.tests}
 ## Questions
 ${gitName}
 \`\`\`
-If you have any questions you can email me at: ${response.questions}
+If you have any questions you can email me at: ${response.questions} .
+\`\`\`
+## Contributors
+${response.contributors}
 ## Author
-\n**${gitName}**
+\nUsername **${gitName}**
 \nGitHub: ${gitUrl}
 \nPortfolio: ${gitPortfolio}
 \`\`\`
 ## License
-${response.licenseName}
+This application is licensed under the ${response.licenseName}
 \`\`\`
-${response.licenseUrl}`
+You can view this license under the ${response.licenseUrl} file.`
 
 writeToFile("ReadMe.md", markDown)
           });
 })
 
-}
+};
 
 //---Function call to initialize program
 init();
