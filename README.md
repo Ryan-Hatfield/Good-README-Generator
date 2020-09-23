@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 # User Inputs Title
 ![GitHub](https://img.shields.io/github/license/ryan-Hatfield/Good-README-Generator) 
+=======
+![GitHub](https://img.shields.io/github/license/ryan-Hatfield/Good-README-Generator)
+# Title 
+>>>>>>> 2a30897aeefb6f932aaaf3635ab6005e4b7266d8
 ## Description
 User inputs the description of the project.
 
