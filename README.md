@@ -1,4 +1,3 @@
-
 # User Inputs Title
 ![GitHub](https://img.shields.io/github/license/ryan-Hatfield/Good-README-Generator)
 ## Description
