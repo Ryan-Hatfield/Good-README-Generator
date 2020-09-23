@@ -1,10 +1,12 @@
-# test 
+# Title 
 ## Description
-test
+User inputs the description of the project.
 
 * [Installation](#Installation)
 
 * [Usage](#Usage)
+
+* [Contributing](#Contributing)
 
 * [Contributors](#Contributors)
 
@@ -17,17 +19,18 @@ test
 * [License](#License)
 
 ## Installation
-test
-## Usage
-test
-## Contributors
-test
-## Tests
-test
-## Questions
-test
-## Author
 
+## Usage
+User inputs examples of usage and instructions.
+## Contributors
+Ryan-Hatfield
+## Tests
+User inputs test examples for testing the the project.
+## Questions
+If you have any questions you can email me at: hatfield086@gmail.com
+## Author
+Ryan-Hatfield
 ## License
-test
-test
+User inputs the name of the license being used.
+```
+User inputs the license URL being used.

@@ -41,8 +41,13 @@ const questions = [
     },
     {
         type: "input",
-        message: "What is your GitHub user name?",
+        message: "What is your GitHub username?",
         name: "username"
+    },
+    {
+        type: "input",
+        message: "Provide the guidelines for contributing to this application.",
+        name: "contributing"
     },
     {
         type: "input",
@@ -56,7 +61,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "Provide any questions you want to add.",
+        message: "What is your email address?",
         name: "questions"
     },
 ];
@@ -65,17 +70,27 @@ const questions = [
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data)
 }
-//---Getting information for the author by GitHub API
+//---Getting information for the author and contributers username by GitHub API
+
+
 
 //---Function to initialize program
 function init() {
     inquirer.prompt(questions)
     .then(function(response){
+        /*const gitUsername = response.username;
+        //const contributorUsername = questions.username;
+        const gitResponse = axios.get(`https://api.github.com/users/${gitUsername}`);
+        const gitData = gitResponse.data;
+        const gitName = gitData.login;
+        const gitEmail = gitData.email;
+        const gitUrl = gitData.html_url;*/
 const markDown = `# ${response.title} 
 ## Description
 ${response.description}
 \n* [Installation](#Installation)
 \n* [Usage](#Usage)
+\n* [Contributing](#Contributing)
 \n* [Contributors](#Contributors)
 \n* [Tests](#Tests)
 \n* [Questions](#Questions)
@@ -86,20 +101,25 @@ ${response.description}
 ${response.installation}
 ## Usage
 ${response.usage}
+## Contributing
+${response.contributing}
 ## Contributors
 ${response.contributors}
 ## Tests
 ${response.tests}
 ## Questions
-${response.questions}
+${response.username}
+\`\`\`
+If you have any questions you can email me at: ${response.questions}
 ## Author
-
+${response.username}
 ## License
 ${response.licenseName}
+\`\`\`
 ${response.licenseUrl}`
 
-        writeToFile("ReadMe.md", markDown)
-    })
+writeToFile("ReadMe.md", markDown)
+})
 
 }
 
