@@ -26,7 +26,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "Provide instructions and examples for use. Include screenshots as needed.",
+        message: "Provide instructions and examples for use. ",
         name: "usage"
     },
     {
@@ -78,14 +78,18 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(function(response){
-        /*const gitUsername = response.username;
-        //const contributorUsername = questions.username;
-        const gitResponse = axios.get(`https://api.github.com/users/${gitUsername}`);
-        const gitData = gitResponse.data;
-        const gitName = gitData.login;
-        const gitEmail = gitData.email;
-        const gitUrl = gitData.html_url;*/
-const markDown = `# ${response.title} 
+        const gitUsername = response.username;
+        const queryUrl = `https://api.github.com/users/${gitUsername}`;
+        axios.get(queryUrl).then(function(res) {
+            const gitData = res.data;
+            const gitName = gitData.login;
+            const gitEmail = gitData.email;
+            const gitUrl = gitData.html_url;
+            const gitPortfolio = gitData.blog;
+            //const contributorUsername = questions.username;
+        
+const markDown = `# ${response.title}
+![GitHub](https://img.shields.io/github/license/ryan-Hatfield/Good-README-Generator) 
 ## Description
 ${response.description}
 \n* [Installation](#Installation)
@@ -104,21 +108,25 @@ ${response.usage}
 ## Contributing
 ${response.contributing}
 ## Contributors
-${response.contributors}
+${gitName}
 ## Tests
 ${response.tests}
 ## Questions
-${response.username}
+${gitName}
 \`\`\`
 If you have any questions you can email me at: ${response.questions}
 ## Author
-${response.username}
+\n**${gitName}**
+\nGitHub: ${gitUrl}
+\nPortfolio: ${gitPortfolio}
+\`\`\`
 ## License
 ${response.licenseName}
 \`\`\`
 ${response.licenseUrl}`
 
 writeToFile("ReadMe.md", markDown)
+          });
 })
 
 }

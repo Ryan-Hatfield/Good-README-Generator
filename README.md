@@ -1,4 +1,5 @@
-# Title 
+# User Inputs Title
+![GitHub](https://img.shields.io/github/license/ryan-Hatfield/Good-README-Generator) 
 ## Description
 User inputs the description of the project.
 
@@ -19,17 +20,27 @@ User inputs the description of the project.
 * [License](#License)
 
 ## Installation
-
+User Inputs the steps to install the project.
 ## Usage
 User inputs examples of usage and instructions.
+## Contributing
+User inputs the guidelines for contribituting to the project.
 ## Contributors
 Ryan-Hatfield
 ## Tests
 User inputs test examples for testing the the project.
 ## Questions
+Ryan-Hatfield
+```
 If you have any questions you can email me at: hatfield086@gmail.com
 ## Author
-Ryan-Hatfield
+
+**Ryan-Hatfield**
+
+GitHub: https://github.com/Ryan-Hatfield
+
+Portfolio: https://ryan-hatfield.github.io/Portfolio/
+```
 ## License
 User inputs the name of the license being used.
 ```
