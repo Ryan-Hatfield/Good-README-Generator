@@ -41,6 +41,11 @@ const questions = [
     },
     {
         type: "input",
+        message: "What is your GitHub user name?",
+        name: "username"
+    },
+    {
+        type: "input",
         message: "If any, provide the GitHub username(s) for any additonal contributors(If there are mulitple contributors, seperate names with a comma and no space!).",
         name: "contributors"
     },
@@ -60,21 +65,39 @@ const questions = [
 function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName), data)
 }
+//---Getting information for the author by GitHub API
 
 //---Function to initialize program
 function init() {
     inquirer.prompt(questions)
     .then(function(response){
-        let markDown = `# ${response.title} 
-        ## Description
-        ${response.description}
-        \n* [Installation](#Installation)
-        \n* [Instructions](#Instructions)
-        \n* [Usage](#Usage)
-        \n* [Contributors](#Contributors)
-        \n* [Tests](#Tests)
-        \n* [Questions](#Questions)
-        \n* [License](#License)`
+const markDown = `# ${response.title} 
+## Description
+${response.description}
+\n* [Installation](#Installation)
+\n* [Usage](#Usage)
+\n* [Contributors](#Contributors)
+\n* [Tests](#Tests)
+\n* [Questions](#Questions)
+\n* [Author](#Author)
+\n* [License](#License)
+
+## Installation
+${response.installation}
+## Usage
+${response.usage}
+## Contributors
+${response.contributors}
+## Tests
+${response.tests}
+## Questions
+${response.questions}
+## Author
+
+## License
+${response.licenseName}
+${response.licenseUrl}`
+
         writeToFile("ReadMe.md", markDown)
     })
 
