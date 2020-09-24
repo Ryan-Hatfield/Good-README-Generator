@@ -32,6 +32,10 @@ After the user runs "npm init" and "npm install", the user will then run "node i
 
 Below are some screen shots of an example of a generated file.
 
+![Screenshot 2020-09-23 191742](https://user-images.githubusercontent.com/66077644/94088340-df092000-fdd5-11ea-8749-9bebba13f2dd.png)
+
+![Screenshot 2020-09-23 191835](https://user-images.githubusercontent.com/66077644/94088327-d9133f00-fdd5-11ea-8c9a-eb76f5b958c8.png)
+
 ## Questions
 **GitHub Username:** Ryan-Hatfield
 
