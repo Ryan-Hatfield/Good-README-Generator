@@ -124,10 +124,10 @@ ${response.tests}
 \nUsername **${gitName}**
 \nIf you have any questions you can email me at: ${response.questions} .
 ## Contributors
-${response.contributors}
+\n**GitHub Username:** ${response.contributors}
 ## Author
-\nUsername **${gitName}**
-\nGitHub: ${gitUrl}
+\n**GitHub Username:** ${gitName}
+\nGitHub Profile: ${gitUrl}
 \nPortfolio: ${gitPortfolio}
 ## License
 \nThis application is licensed under the ${response.licenseName}

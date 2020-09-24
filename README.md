@@ -34,12 +34,13 @@ Username **Ryan-Hatfield**
 
 If you have any questions you can email me at: hatfield086@gmail.com .
 ## Contributors
-Ryan-Hatfield
+
+**GitHub Username:** Ryan-Hatfield
 ## Author
 
-Username **Ryan-Hatfield**
+**GitHub Username:** Ryan-Hatfield
 
-GitHub: https://github.com/Ryan-Hatfield
+GitHub Profile: https://github.com/Ryan-Hatfield
 
 Portfolio: https://ryan-hatfield.github.io/Portfolio/
 ## License
