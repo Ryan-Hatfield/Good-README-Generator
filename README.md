@@ -36,6 +36,9 @@ Below are some screen shots of an example of a generated file.
 
 ![Screenshot 2020-09-23 191835](https://user-images.githubusercontent.com/66077644/94088327-d9133f00-fdd5-11ea-8c9a-eb76f5b958c8.png)
 
+Below is a link showing how to go through the application.
+https://drive.google.com/file/d/1Fkk6HlYJQySMXBKZH8slvWQRGrRTB_QB/view?usp=sharing 
+
 ## Questions
 **GitHub Username:** Ryan-Hatfield
 
